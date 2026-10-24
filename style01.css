@@ -1,0 +1,113 @@
+/* Ripristino base dei margini e dei padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace, Arial, sans-serif;
+    background-color: #000000;
+    color: #ff0000;
+}
+
+/* --- MENÙ LATERALE FISSO CON SCROLL (DESKTOP) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;          /* Copre l'intera altezza dello schermo del PC */
+    background-color: #1e293b;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;       /* FONDAMENTALE: attiva la barra di scorrimento verticale autonoma nel menù */
+}
+
+.sidebar h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+/* Stile link */
+.sidebar a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar a:link, 
+.sidebar a:visited {
+    color: #38bdf8;
+}
+
+.sidebar a:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+.sidebar a:active,
+.sidebar a.active {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* Contenuto principale su PC */
+.content {
+    margin-left: 240px;
+    padding: 40px 20px;
+}
+
+
+/* ==========================================================
+   VERSIONE MOBILE / SCHERMI PICCOLI (Smartphone <= 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 200px;  /* Limita l'altezza del menù in alto su mobile */
+        overflow-y: auto;   /* Mantiene lo scroll attivo anche su mobile se i link sono tanti */
+        padding: 15px;
+    }
+
+    .sidebar h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .sidebar li {
+        margin-bottom: 0;
+    }
+
+    .sidebar a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+}
