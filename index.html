@@ -2,28 +2,36 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <!-- Tag viewport essenziale per il layout responsive su cellulare -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La mia pagina personale</title>
-    <!-- Collegamento al file style.css -->
+    <title>Esempio Menù Laterale Fisso</title>
+    <!-- Collegamento al foglio di stile esterno -->
     <link rel="stylesheet" href="style01.css">
 </head>
 <body>
 
-    <main>
-       <nav class="sidebar">
-        <ul>
+    <!-- Menù di navigazione verticale fisso a sinistra -->
+    <nav class="sidebar">
         <h2>Menù</h2>
-        <li><a href="https://tilde.club/~willthekid/test">Vai alla mia pagina tilde...</a></li>
-        <li><a href="https://willthekid.altervista.org">Vai alla mia pagina altervista...</a></li>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
         </ul>
-        </nav>
-        <h1>Benvenuto nel mio spazio web</h1>
-        <p>Ciao da WillTheKid!!!</p>
-        <p>Direi che funziona!!!<br>Questa è un'altra modifica...</p>
-        <a href="https://tilde.club/~willthekid/test">Vai alla mia pagina tilde...</a>>
-        <a href="https://willthekid.altervista.org">Vai alla mia pagina altervista...</a>
+    </nav>
+
+    <!-- Contenuto principale della pagina -->
+    <main class="content">
+        <h1>Benvenuto nella mia pagina</h1>
+        <p>Questo è il contenuto principale della pagina. Scorrendo verso il basso si può notare che il menù a sinistra rimane fisso al suo posto.</p>
+        
+        <!-- Spazio aggiuntivo per testare lo scorrimento (scroll) -->
+        <div style="height: 1500px; padding-top: 20px;">
+            <p><em>Scorri la pagina verso il basso...</em></p>
+        </div>
     </main>
 
 </body>
 </html>
+
